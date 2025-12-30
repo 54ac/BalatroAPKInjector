@@ -2,7 +2,7 @@
 
 ### What is this?
 
-This is a simple Python script that injects the Android build of [Lovely](https://github.com/kodenamekrak/lovely-injector) to the retail APK of Balatro, adding mod support to the game. Primarily written to be used with the [Mobile Mod Menu](https://github.com/54ac/BalatroMobileModMenu) mod, but should work with others as long as they were written for the mobile version of the game.
+This is a simple Python script that injects the Android build of [Lovely](https://github.com/kodenamekrak/lovely-injector) to the retail APK of Balatro, adding mod support to the game. Primarily written to be used with the [Mobile Menu Mod](https://github.com/54ac/BalatroMobileMenuMod) mod, but should work with others as long as they were written for the mobile version of the game.
 
 ### Requirements
 
