@@ -150,7 +150,6 @@ def patch_apk(
                     )
             with open(manifest_file, "w", encoding="utf-8") as f:
                 f.write(new_content)
-            print("Patched AndroidManifest.xml")
         else:
             print(
                 "Warning: Original package ID not found in AndroidManifest.xml, skipping package ID patch"
@@ -158,23 +157,6 @@ def patch_apk(
     else:
         print("Error: AndroidManifest.xml not found")
         sys.exit(1)
-
-    conf_file = work_dir / "assets" / "conf.lua"
-    if conf_file.exists():
-        print("Patching conf.lua...")
-        with open(conf_file, "r", encoding="utf-8") as f:
-            content = f.read()
-        target = "t.title = 'Balatro'"
-        if target in content:
-            new_content = content.replace(
-                target, target + "\n\tt.externalstorage = true", 1
-            )
-            with open(conf_file, "w", encoding="utf-8") as f:
-                f.write(new_content)
-        else:
-            print("Warning: conf.lua content mismatch, skipping external storage patch")
-    else:
-        print("Warning: conf.lua not found, skipping external storage patch")
 
     print(f"Rebuilding to {output_apk}...")
     rebuild_cmd = [
